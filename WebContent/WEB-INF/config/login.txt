@@ -1,0 +1,17 @@
+# 登录相关配置文件
+qq_app_ID = 101188797
+qq_app_KEY = 8e54cd062890f4283de816d6a0a6516c
+qq_redirect_URI = http://www.companyclub.cn/qqlogin.jsp
+qq_scope = get_user_info
+
+wx_web_ID = wxbf34964015049e66
+wx_web_KEY = 374737647899dcab5ce2b7385230cb11
+wx_app_ID = wx07bd718ecc7930f7
+wx_app_KEY = 0acf66d189f778008c83d0254ac522cf
+wx_redirect_URI = http://www.companyclub.cn/wxlogin.jsp
+wx_scope = snsapi_login
+
+dd_app_ID = dingoaenyzx8hg1ad5p6s2
+dd_app_KEY = cPpKOE1wxwlbu3ZcWalRK0p4DNRynjjzwYjFzQ2URlLpbVZnaO2kftUU6BvCTrE2
+dd_redirect_URI = http://www.companyclub.cn/ddlogin.jsp
+dd_scope = snsapi_login

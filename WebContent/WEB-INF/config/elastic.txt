@@ -1,0 +1,7 @@
+# ELASTIC配置文件
+enable = 1
+host = elastic.sharecarding.com
+port = 80
+user = elastic
+password = najeI9HrxPwNV@gN
+database = rubyphp

@@ -1,0 +1,5 @@
+# 邮件配置文件
+NOTICE_MAIL_ACCOUNT = notice@companyclub.cn
+NOTICE_MAIL_PASSWD = oBHwE63hzctrMm9E
+NOTICE_MAIL_SMTP = smtp.companyclub.cn
+NOTICE_MAIL_PORT = 465

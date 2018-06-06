@@ -1,0 +1,7 @@
+# MONGODB配置文件
+enable = 0
+host = mongo
+port = 27017
+user = rubyphp
+password = rubyphp
+database = rubyphp

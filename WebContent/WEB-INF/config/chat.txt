@@ -1,0 +1,4 @@
+# 聊天服务器配置文件
+
+rongyun_appid = 8aaf07086178588a0161c728c2ed0bc1
+rongyun_apptoken = 436710e98ab1f1d222264d6da3d4b005

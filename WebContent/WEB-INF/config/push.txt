@@ -1,0 +1,5 @@
+# APP推送相关配置文件
+
+jpush_url = https://api.jpush.cn/v3/push
+jpush_appkey = cfade49b2349ea569a27a35d
+jpush_secret = e8ce41753a956d8568a7ee94

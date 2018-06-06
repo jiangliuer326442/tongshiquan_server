@@ -1,0 +1,5 @@
+#七牛云存储配置文件
+qiniu_ACCESS_KEY = 973HUX2wczaUHopbU1f1ebPobts9u5zRwz0rUHUY
+qiniu_SECRET_KEY = CvKWQCfnC1ozWKyfUNcVajgqDtKNq5htPKGL73AO
+qiniu_bucketname = companyclub
+qiniu_host = static.companyclub.cn

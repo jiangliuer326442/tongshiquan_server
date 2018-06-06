@@ -1,0 +1,316 @@
+# URL配置文件
+# URL路径 = 控制器
+# 默认路径（网站初始化时展示的页面）
+default = Default:index
+
+#---------------------------数据同步--------------------------
+# 文章导出
+export_article = posts.articles.Export:index
+
+#---------------------------APP模块--------------------------
+# 检查更新
+ckversion = app.version.Ckversion:android
+# 检测APP启动屏幕
+cksplash = app.splash.Cksplash:android
+
+#---------------------------企业模块--------------------------
+# 检索企业
+company_search = company.info.Search:index
+# 获取我的企业信息
+company_getmyinfo = company.info.Getcompany:getmycompanyinfo
+# 企业注册
+company_adduser = company.reg.Register:reg
+# 企业解绑
+company_unbind = company.reg.Register:unreg
+# 获取用户企业信息
+company_getuserinfo = company.reg.Ckuser:getuserinfo
+# 获取指定用户企业信息
+company_getsbuserinfo = company.reg.Ckuser:getsbuserinfo
+# 获取企业二维码
+company_getqrcode = company.info.CompanyQrcode:getregqrcode
+# 获取企业配置信息
+company_getcfginfo = company.cfg.Cfg:getcompanycfg
+# 设置企业配置信息
+company_setcfginfo = company.cfg.Cfg:setcompanycfg
+# 获取企业组织架构
+company_getstructure = company.structure.Structure:getstructure
+# 获取树状企业架构
+company_gettreestructure = company.structure.Structure:getstructtree
+# 获取部门下属
+company_getstructureemployee = company.structure.Structure:getstructurewithemployee
+# 添加部门
+company_addstructure = company.structure.Structure:setstructure
+# 删除员工
+company_delemployee = company.employee.Set:delemployee
+# 修改部门名称
+company_renamestructure = company.structure.Structure:renamestructure
+# 删除部门
+company_delstructure = company.structure.Structure:deldepartment
+# 添加员工
+company_addemployee = company.employee.Add:index
+# 修改员工信息
+company_modifyemployee = company.employee.Set:chginfo
+# 设置员工部门
+company_setemployeedp = company.structure.Structure:setemployeestructure
+# 员工列表
+company_epllist = company.employee.List:index
+# 设置我的头像
+setmycompanyavatar = company.employee.Set:avatar
+# 设置我的昵称
+setmycompanynick = company.employee.Set:nick
+# 获取企业名称
+company_getname = company.visitors.Getname:index
+# 变更企业超级管理员
+setsmanager = company.manager.smanager:set
+
+#---------------------------用户信息模块--------------------------
+# 变更密码
+changepasswd = user.Set:setpwd
+# 发送变更手机号验证码
+sendchgcode = mobilemsg.Send:sendChangemsg
+# 发送登录短信
+changephone = user.Set:setphone
+
+#---------------------------推特模块--------------------------
+# 获取可见性
+gettwtvisible = twitter.Create:getvisible
+# 发表推特
+addtwt = twitter.Create:index
+# 上传文件
+addtwtfile = twitter.Create:addtwtfile
+# 上传链接
+addtwtlink = twitter.Create:addtwturl
+# 获取好友推特列表
+getcompanytwt = twitter.List:getbymyview
+# 获取员工推特列表
+getemployeetwt = twitter.List:getbymycompany
+# 添加推特屏蔽
+addtwthidebyid = twitter.Hide:hidetwtbyid
+# 隐藏指定用户推特
+hidetwthidebyuid = twitter.Hide:hidetwtbyuid
+# 不显示我的推特
+hidemytwtbyuid = twitter.Hide:hidemytwtbyuid
+# 删除我的推特
+delmytwt = twitter.Del:delmytwt
+# 删除员工推特
+delemptwt = twitter.Del:delemptwt
+# 获取屏蔽的用户列表
+twthideuserls = twitter.Hide:gethideuidls
+# 删除屏蔽的用户
+twtdelhideuser = twitter.Hide:delhideuid
+# 删除我产生的屏蔽的用户
+twtdelmyhideuser = twitter.Hide:delmyhideuid
+# 推特点赞
+twtaddzan = twitter.Zan:addzan
+# 取消推特点赞
+twtdelzan = twitter.Zan:removezan
+# 推特添加评论
+twtaddcomment = twitter.comment.Add:index
+# 删除我的评论
+delmytwtcmt = twitter.comment.Delete:index
+# 推特回复评论
+twtreplycomment = twitter.comment.Add:reply
+# 推特被删除的用户列表
+twtdeluserlist = twitter.User:list
+# 推特禁止某用户发言
+twtdisuserspk = twitter.User:disableuser
+# 推特允许某用户发言
+twtenuserspk = twitter.User:enableuser
+
+#---------------------------贴吧模块--------------------------
+# 发帖
+addpost = tieba.articles.Add:index
+# 贴吧申请
+tieba_approval = tieba.models.Approval:lists
+# 处理贴吧申请
+tieba_handleapproval = tieba.models.Approval:handleapprov
+# 获取贴吧列表
+tieba_getsectionlist = tieba.models.Get:lists_byuser
+# 添加贴吧信息
+tieba_addsection = tieba.models.Add:addtieba
+# 添加贴吧图片
+tieba_addsectionimg = tieba.models.Add:addtiebaimg
+# 获取贴吧信息
+tieba_getsectiondetail = tieba.models.Get:info
+# 修改贴吧信息
+tieba_setsection = tieba.models.Set:setmodels
+# 获取帖子列表
+getposts = tieba.articles.List:getallsectionlist
+# 获取我发布的帖子列表
+getmyposts = tieba.user.Article:getmylist
+# 获取贴吧帖子列表
+getsectionposts = tieba.articles.List:getbysection
+
+#---------------------------公告模块--------------------------
+# 获取栏目列表
+post_getsectionlist = posts.models.Get:lists
+# 获取栏目信息
+post_getsectiondetail = posts.models.Get:info
+# 修改栏目信息
+post_setsection = posts.models.Set:setmodels
+# 添加公告信息
+post_addsection = posts.models.Add:addgonggao
+# 删除栏目信息
+post_delsection = posts.models.Del:delbysectionid
+
+#---------------------------登录模块--------------------------
+# QQ登录（地址必须要和QQ互联中的回调地址一致）
+qqlogin = user.Login:qqlogin
+# APP的QQ登录
+qqloginbyapp = user.Login:qqloginbyapp
+# 微信登录（地址必须要和微信开放平台中的回调地址一致）
+wxlogin = user.Login:wxlogin
+# APP的微信登录
+wxloginbyapp = user.Login:wxloginbyapp
+# 叮叮登录（地址必须要和叮叮开放平台中的回调地址一致）
+ddlogin = user.Login:ddlogin
+# 绑定qq号
+qqbind = user.Login:qqbind
+# 绑定微信号
+wxbind = user.Login:wxbind
+# 绑定叮叮号
+ddbind = user.Login:ddbind
+# 设置绑定的qq
+setqqopenid = user.Login:setqqopenid
+# 绑定叮叮号
+ddbind = user.Login:ddbind
+# 设置绑定的微信
+setwxopenid = user.Login:setwxopenid
+# 设置绑定的叮叮
+setddopenid = user.Login:setddopenid
+# 手机号登陆
+loginbyphone = user.Login:loginbyphone
+# 密码登陆
+loginbypass = user.Login:loginbypwd
+# 根据openid获取token
+gettoken = user.Cklogin:gettokenByopenid
+# 发送注册短信
+sendregcode = mobilemsg.Send:sendRegistermsg
+# 发送登录短信
+sendlogcode = mobilemsg.Send:sendLoginmsg
+# 获取我的手机号
+getmyphone = user.Cklogin:getphonebyuid
+# 注册
+register = user.Register:reg
+# 使用手机号注册
+registerbyphone = user.Register:regbyphone
+# 获取用户信息
+getbytoken = user.Cklogin:getuserinfoBytoken
+# 获取第三方登陆帐号绑定信息
+getuserbind = user.Cklogin:getbindinfobyuid
+# 退出
+logout = user.Logout:index
+
+#---------------------------社交模块------------------------
+# 发送站内信
+sendinnermsg = innermsg.notice.ShortMessage:send
+# 发出的站内信
+sendedinnermsg = innermsg.user.Lists:mysended
+# 收到的站内信
+receivedinnermsg = innermsg.user.Lists:myreceived
+# 未读站内信数量
+unreadinnermsgnum = innermsg.user.Lists:unreadnum
+# 设置站内信阅读状态
+setinnermsgreadflg = innermsg.user.Lists:setreadflg
+# 关注
+careuser = club.Care:makecare
+# 删除好友
+delfriend = club.Care:delfriend
+# 备注他人
+markuser = club.Mark:addmark
+# 好友列表
+friendlist = club.Care:friendslist
+# 获取聊天服务器配置信息
+getchatcfg = club.Chat:getchatcfg
+# 添加聊天记录
+addchat = club.Chat:addchat
+# 上传聊天文件
+addchatfile = club.Chat:addchatfile
+# 获取聊天记录
+getchatlog = club.Chat:getchatlog
+# 获取最近联系人
+getrecentchater = club.Chat:getrecentchater
+# 删除最近联系人
+delrecentchater = club.Chat:delrecentchater
+# 获取用户信息
+getchatuserinfo = club.Info:getchatuserinfo
+
+#---------------------------ELASTIC模块---------------------
+elastic_connect = ruby.elastic.operation.connection.Test:index
+elastic_getdbs = ruby.elastic.operation.dbs.Get:index
+
+#---------------------------社会化评论模块----------------------
+# 网址注册（可调用社会化评论插件的网址进行注册）
+comment_webregister = ruby.social.comments.register.UriRegister:register
+# 子帐号注册（一个网址可以有多个独立子帐号，子帐号间数据隔离）
+comment_platregister = ruby.social.comments.register.PlatRegister:register
+# 用户注册（使用手机号注册，全局通用）
+comment_userregister = ruby.social.comments.user.UserOperation:register
+# 用户手机号变更
+comment_userphonechg = ruby.social.comments.user.UserOperation:chgphone
+# 用户昵称变更
+comment_usernickchg = ruby.social.comments.user.UserOperation:chgnick
+# 文章点赞
+comment_articlezan = ruby.social.comments.zan.ArticlezanOperates:zan
+# 文章取消点赞
+comment_articleunzan = ruby.social.comments.zan.ArticlezanOperates:unzan
+# 评论添加
+comment_add = ruby.social.comments.comment.CommentOperation:add
+# 评论删除
+comment_del = ruby.social.comments.comment.CommentDel:delbycid
+# 评论回复添加
+comment_addreply = ruby.social.comments.comment.CommentOperation:reply_add
+# 评论列表
+comment_list = ruby.social.comments.comment.CommentLists:getByarticleid
+# 我的评论列表
+comment_mylist = ruby.social.comments.user.CommentList:getCommentlistbyphone
+# 我参与的评论列表
+comment_withmylist = ruby.social.comments.user.CommentList:getOtherCommentsbyphone
+# 评论列表（水平）
+comment_list_flat = ruby.social.comments.comment.CommentLists:getByaidflat
+# 评论点赞
+comment_zan = ruby.social.comments.comment.zan.ZanOperation:adds
+# 评论取消点赞
+comment_unzan = ruby.social.comments.comment.zan.ZanOperation:removes
+
+#---------------------------文章模块----------------------
+# 文章列表
+getarticles = posts.articles.List:getbysectionid
+# 根据文章id获取的文章列表
+getarticlesbyarticleid = posts.articles.List:getsectionlistbyarticleid
+# 公告列表
+getfarticles = posts.articles.List:getfirstsectionlist
+# 其他公告栏目
+getoarticles = posts.articles.List:getothersectionlist
+# 删除文章
+del_article = posts.articles.Del:index
+# 上传文章
+add_article = posts.articles.Add:index
+# 修改文章
+edit_article = posts.articles.Edit:setarticle
+# 获取文章
+getarticle = posts.articles.Detail:getarticlebyid
+# 管理员获取文章
+getarticlebyadmin = posts.articles.Detail:getarticleadminbyid
+# 修改文章置顶状态
+setistop = posts.articles.Edit:setistop
+# 上传图片
+imageup = posts.articles.Image:upload
+# 获取评论
+getcomments = posts.comments.Lists:getcommentlist_hierarchal
+# 获取评论（水平）
+getcomments_flat = posts.comments.Lists:getcommentlist_flat
+# 添加评论
+addcomment = posts.comments.Add:index
+# 删除评论
+delcomment = posts.comments.Del:index
+# 添加评论回复
+addcommentreply = posts.comments.Add:reply
+# 获取我发表的评论列表
+getmycomments = posts.comments.Mine:getmycomments
+# 获取别人发表的评论列表
+getwithmycomments = posts.comments.Mine:getwithmycomments
+# 点赞
+zan = posts.comments.Add:zan
+# 取消点赞
+unzan = comments.Zan:remove

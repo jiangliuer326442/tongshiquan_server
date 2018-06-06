@@ -1,0 +1,4 @@
+# 短信发送配置文件
+ronglian_ACCOUNT_SID = aaf98f8953cadc690153e0b928134610
+ronglian_AUTH_TOKEN = 42a9d291ba7044baa949c859386ae4e1
+ronglian_AppID = 8aaf07086178588a0161c728c2ed0bc1
